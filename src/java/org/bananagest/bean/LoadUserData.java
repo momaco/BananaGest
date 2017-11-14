@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javax.faces.bean.ApplicationScoped;
 import javax.faces.bean.ManagedBean;
 import org.bananagest.model.Connexion;
 import org.bananagest.model.User;
@@ -17,7 +16,6 @@ import org.bananagest.model.UsersData;
  * @author feris
  */
 @ManagedBean
-@ApplicationScoped
 public class LoadUserData {
     
     public void onLoad() 

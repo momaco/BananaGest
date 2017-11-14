@@ -1,7 +1,10 @@
 package org.bananagest.bean;
 
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.SessionScoped;
+import javax.faces.context.FacesContext;
 import org.bananagest.model.IdentifyUser;
 import org.bananagest.model.User;
 import org.bananagest.model.UsersData;
@@ -11,45 +14,57 @@ import org.bananagest.model.UsersData;
  * @author feris
  */
 @ManagedBean
-@SessionScoped
 public class Login {
-    
+
     private String user;
     private String password;
     private String message;
     
     //Actions 
-    public void checkUser()
-    {
+    public void checkUser() {
+
         UsersData data = UsersData.getInstance();
-        
-        if(user.isEmpty() || password.isEmpty())
+        boolean pass = false;
+
+        if (user.isEmpty() || password.isEmpty()) 
         {
             message = "All fields must be filled";
-        }
-        else
+        } 
+        else 
         {
             for (Object obj : data.getMap().values()) 
             {
                 User us = (User) obj;
-                
-                if((us.getName().equals(user) || us.getEmail().equals(user)) 
-                   && (us.getPassword().equals(password)))
+
+                if ((us.getName().equals(user) || us.getEmail().equals(user))
+                        && (us.getPassword().equals(password))) 
                 {
-                    message = "Entro con :"+user+" y "+password; 
                     IdentifyUser id = IdentifyUser.getInstance();
-                    
+
                     id.setIdUser(us.getId());
+                    
+                    pass = true;
                     
                     break;
                 }
-                else
+                else 
                 {
                     message = "The user or password is incorrect";
                 }
-            } 
+            }
         }
-            
+        try 
+        {
+            if(pass)
+            {
+                FacesContext.getCurrentInstance().getExternalContext().redirect("home.xhtml");
+                FacesContext.getCurrentInstance().responseComplete();
+            }
+        } 
+        catch (IOException ex) 
+        {
+            Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     //Get and set
