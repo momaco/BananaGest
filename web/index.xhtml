@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://xmlns.jcp.org/jsf/html">
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>
         <title>Banana Gest</title>
         <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"/>
@@ -10,10 +11,16 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700"/>
         <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet"/>
         <link rel="stylesheet" href="css/custom.css"/>
-        <link rel="shortcut icon" href="favicon.png"/>
+        <link rel="stylesheet" href="css/main.css"/>
+        <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Banana-Single.jpg/1200px-Banana-Single.jpg"/>
     </h:head>
     <h:body>
         
+        <h:form id="hidden" style="display:none">
+            <h:commandLink id="link">
+                <f:ajax event="click" listener="#{loadUserData.onLoad()}" />
+            </h:commandLink>
+        </h:form>
         <section class="page login-page">
             <div class="container d-flex align-items-center">
                 <div class="form-holder has-shadow">
@@ -25,7 +32,7 @@
                                     <div class="logo">
                                         <h1>Banana Gest</h1>
                                     </div>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                    <p>The flagship project of Banana Apps.</p>
                                 </div>
                             </div>
                         </div>
@@ -35,16 +42,22 @@
                                 <div class="content">
                                     <h:form id="login-form">
                                         <div class="form-group">
-                                            <h:inputText id="user" required="" class="input-material"/>
+                                            <h:inputText id="user" value="#{login.user}" class="input-material"/>
                                             <label for="login-username" class="label-material">User Name</label>
                                         </div>
                                         <div class="form-group">
-                                            <h:inputSecret id="password" required="" class="input-material"/>
+                                            <h:inputSecret id="password" value="#{login.password}" class="input-material"/>
                                             <label for="login-password" class="label-material">Password</label>
-                                        </div><h:button id="login" class="btn btn-primary" value="Login"/>
+                                        </div>
+                                        <h:commandButton id="login" class="btn btn-primary" value="Login">
+                                            <f:ajax execute="user password" render="mesageLogin" listener="#{login.checkUser()}"/>
+                                        </h:commandButton>
                                         <!-- This should be submit button but I replaced it with <a> for demo purposes-->
-                                    </h:form><a href="#" class="forgot-pass">Forgot Password?</a><br/><small>Do not have an account? </small><a href="register.html" class="signup">Signup</a><br/><br/><br/>
-                                    <div id="warning"></div>
+
+                                        <a href="#" class="forgot-pass">Forgot Password?</a><br/><small>Do not have an account? </small><a href="register.html" class="signup">Signup</a><br/><br/><br/>
+                                        <h:outputText id="mesageLogin" class="warning" value="#{login.message}"/>
+
+                                    </h:form>
                                 </div>
                             </div>
                         </div>
@@ -58,8 +71,8 @@
         </section>
         
     </h:body>
-    
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="js/OnLoad.js"></script>
+    <script src="js/jquery-3.2.1.js"></script>
     <script src="vendor/popper.js/umd/popper.min.js"> </script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="vendor/jquery.cookie/jquery.cookie.js"></script>
