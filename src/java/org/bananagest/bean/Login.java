@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 import org.bananagest.model.IdentifyUser;
 import org.bananagest.model.User;
@@ -14,6 +15,7 @@ import org.bananagest.model.UsersData;
  * @author feris
  */
 @ManagedBean
+@SessionScoped
 public class Login {
 
     private String user;
