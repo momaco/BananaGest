@@ -14,7 +14,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "tbl_user" ,catalog = "bananaguest")
-public class Tbl_user implements Serializable{
+public class Tbl_user{
  
     @Id @GeneratedValue
     @Column(name = "idUser", nullable = true)
