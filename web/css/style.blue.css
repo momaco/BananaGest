@@ -932,7 +932,7 @@ section.dashboard-counts .row {
 
 section.dashboard-counts div[class*='col-'] .item {
   border-right: 1px solid #eee;
-  padding: 15px 0;
+  padding: 15px 50;
 }
 
 section.dashboard-counts div[class*='col-']:last-of-type .item {
@@ -963,7 +963,7 @@ section.dashboard-counts div[class*='col-']:last-of-type .item {
 }
 
 .statistic:last-of-type {
-  margin-bottom: 0;
+  margin-bottom: 50;
 }
 
 .statistic strong {
