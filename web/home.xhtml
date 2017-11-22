@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8' ?> 
+<?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -7,9 +7,9 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
 
     <h:head>
-        
+
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Banana Gest</title>
+        <title>BananaGEST</title>
         <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="css/fontastic.css"/>
         <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css"/>
@@ -17,11 +17,10 @@
         <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet"/>
         <link rel="stylesheet" href="css/custom.css"/>
         <link rel="shortcut icon" href="favicon.png"/>
-        
+
     </h:head>
 
     <h:body>
-
         <div class="page home-page">
             <!-- Main Navbar-->
             <header class="header">
@@ -31,7 +30,7 @@
                             <!-- Navbar Header-->
                             <div class="navbar-header">
                                 <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
-                                    <div class="brand-text brand-big"><span>Banana</span><strong>Gest</strong></div>
+                                    <div class="brand-text brand-big"><span>Banana</span><strong>GEST</strong></div>
                                     <div class="brand-text brand-small"><strong>BD</strong></div></a>
                                 <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
                             </div>
@@ -45,7 +44,6 @@
                 </nav>
             </header>
         </div>
-
         <div class="page-content d-flex align-items-stretch">
             <!-- Side Navbar -->
             <nav class="side-navbar">
@@ -91,63 +89,158 @@
                 <section class="dashboard-counts no-padding-bottom">
                     <div class="container-fluid">
                         <div class="row bg-white has-shadow">
-                            <!-- Item -->
+                            <!-- New Users -->
                             <div class="col-xl-3 col-sm-6">
                                 <div class="item d-flex align-items-center">
                                     <div class="icon bg-violet"><i class="icon-user"></i></div>
-                                    <div class="title"><span>New<br/>Clients</span>
+                                    <div class="title"><span>New<br/>Users</span>
                                         <div class="progress">
                                             <div role="progressbar" style="width: 25%; height: 4px;" aria-valuenow="{#val.value}" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-violet"></div>
                                         </div>
                                     </div>
-                                    <div class="number"><strong>25</strong></div>
+                                    <div class="number"><strong>00</strong></div>
                                 </div>
                             </div>
-                            <!-- Item -->
+                            <!-- New Project -->
                             <div class="col-xl-3 col-sm-6">
                                 <div class="item d-flex align-items-center">
                                     <div class="icon bg-red"><i class="icon-padnote"></i></div>
-                                    <div class="title"><span>Work<br/>Orders</span>
+                                    <div class="title"><span>New<br/>Projects</span>
                                         <div class="progress">
                                             <div role="progressbar" style="width: 70%; height: 4px;" aria-valuenow="{#val.value}" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
                                         </div>
                                     </div>
-                                    <div class="number"><strong>70</strong></div>
+                                    <div class="number"><strong>00</strong></div>
                                 </div>
                             </div>
-                            <!-- Item -->
+                            <!-- New Task -->
                             <div class="col-xl-3 col-sm-6">
                                 <div class="item d-flex align-items-center">
                                     <div class="icon bg-green"><i class="icon-bill"></i></div>
-                                    <div class="title"><span>New<br/>Invoices</span>
+                                    <div class="title"><span>New<br/>Task</span>
                                         <div class="progress">
                                             <div role="progressbar" style="width: 40%; height: 4px;" aria-valuenow="{#val.value}" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-green"></div>
                                         </div>
                                     </div>
-                                    <div class="number"><strong>40</strong></div>
-                                </div>
-                            </div>
-                            <!-- Item -->
-                            <div class="col-xl-3 col-sm-6">
-                                <div class="item d-flex align-items-center">
-                                    <div class="icon bg-orange"><i class="icon-check"></i></div>
-                                    <div class="title"><span>Open<br/>Cases</span>
-                                        <div class="progress">
-                                            <div role="progressbar" style="width: 50%; height: 4px;" aria-valuenow="{#val.value}" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-orange"></div>
-                                        </div>
-                                    </div>
-                                    <div class="number"><strong>50</strong></div>
+                                    <div class="number"><strong>00</strong></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
-                
-            </div>
-        </div>
+                <!-- Projects Section-->
+                <section class="projects no-padding-top">
+                  <div class="container-fluid">
+                    <!-- Project1-->
+                    <div class="project">
+                      <div class="row bg-white has-shadow">
+                        <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
+                          <div class="project-title d-flex align-items-center">
+                            <div class="image has-shadow"><img src="img/project-1.jpg" alt="..." class="img-fluid"/></div>
+                            <div class="text">
+                              <h3 class="h4">Project Title</h3><small>TEAM LEADER</small>
+                            </div>
+                          </div>
+                          <div class="project-date"><span class="hidden-sm-down">Start </span></div>
+                        <div class="project-date"><span class="hidden-sm-down">Deadline</span></div>
+                      </div>
+                      <div class="right-col col-lg-6 d-flex align-items-center">
+                        <div class="project-progress">
+                          <div class="progress">
+                            <div role="progressbar" style="width: 50%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <!-- Project2-->
+                    <div class="project">
+                      <div class="row bg-white has-shadow">
+                        <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
+                          <div class="project-title d-flex align-items-center">
+                            <div class="image has-shadow"><img src="img/project-1.jpg" alt="..." class="img-fluid"/></div>
+                            <div class="text">
+                              <h3 class="h4">Project Title</h3><small>TEAM LEADER</small>
+                            </div>
+                          </div>
+                          <div class="project-date"><span class="hidden-sm-down">Start </span></div>
+                        <div class="project-date"><span class="hidden-sm-down">Deadline</span></div>
+                      </div>
+                      <div class="right-col col-lg-6 d-flex align-items-center">
+                        <div class="project-progress">
+                          <div class="progress">
+                            <div role="progressbar" style="width: 50%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <!-- Project3-->
+                    <div class="project">
+                      <div class="row bg-white has-shadow">
+                        <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
+                          <div class="project-title d-flex align-items-center">
+                            <div class="image has-shadow"><img src="img/project-1.jpg" alt="..." class="img-fluid"/></div>
+                            <div class="text">
+                              <h3 class="h4">Project Title</h3><small>TEAM LEADER</small>
+                            </div>
+                          </div>
+                          <div class="project-date"><span class="hidden-sm-down">Start </span></div>
+                        <div class="project-date"><span class="hidden-sm-down">Deadline</span></div>
+                      </div>
+                      <div class="right-col col-lg-6 d-flex align-items-center">
+                        <div class="project-progress">
+                          <div class="progress">
+                            <div role="progressbar" style="width: 50%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                    <!-- Project4-->
+                    <div class="project">
+                      <div class="row bg-white has-shadow">
+                        <div class="left-col col-lg-6 d-flex align-items-center justify-content-between">
+                          <div class="project-title d-flex align-items-center">
+                            <div class="image has-shadow"><img src="img/project-1.jpg" alt="..." class="img-fluid"/></div>
+                            <div class="text">
+                              <h3 class="h4">Project Title</h3><small>TEAM LEADER</small>
+                            </div>
+                          </div>
+                          <div class="project-date"><span class="hidden-sm-down">Start </span></div>
+                        <div class="project-date"><span class="hidden-sm-down">Deadline</span></div>
+                      </div>
+                      <div class="right-col col-lg-6 d-flex align-items-center">
+                        <div class="project-progress">
+                          <div class="progress">
+                            <div role="progressbar" style="width: 50%; height: 6px;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100" class="progress-bar bg-red"></div>
+                          </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+
+                  </div>
+                </section>
 
     </h:body>
-    
+
+    <!-- Footer Section-->
+        <footer class="main-footer">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-6">
+                <p>BananaGEST © 2017</p>
+              </div>
+              <div class="col-sm-6 text-right">
+                <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious &amp; BananaGest Team</a></p>
+                <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+              </div>
+            </div>
+          </div>
+        </footer>
+
+<!-- Javascript files-->
     <script src="js/jquery-3.2.1.js"></script>
     <script src="vendor/popper.js/umd/popper.min.js"> </script>
     <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -156,5 +249,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <script src="js/charts-home.js"></script>
     <script src="js/front.js"></script>
-    
+
 </html>
