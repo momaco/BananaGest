@@ -1,1 +1,61 @@
-/* your styles go here */
+.pagination.pagination-split li a {
+    border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    text-align: -webkit-match-parent;
+}
+
+.pagination>li>a, .pagination>li>span {
+    position: relative;
+    float: left;
+    padding: 6px 12px;
+    margin-left: -1px;
+    line-height: 1.42857143;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+}
+
+.profile_details .profile_view{
+    display: inline-block;
+    padding: 10px 0 0;
+    background: #fff;
+}
+
+.well{
+    min-height: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e3e3e3;
+    border-radius: 4px;
+    box-shadow: inset 0 1px, 1px;
+    box-sizing: border-box;
+}
+
+.profile_details .profile_view .img-circle{
+    border:1px solid #e6e9ed;
+    padding: 2.1px;
+}
+
+.img-circle{
+    border-radius: 50%;
+    vertical-align: middle;
+    box-sizing: border-box;
+}
+
+.text-center{
+    text-align: center;
+}
+
+:after, :before{
+    box-sizing: border-box;
+}
+
+.profile_details .profile_view .brief{
+    font-weight: 300;
+}
+
+.profile_details .profile_view .bottom{
+    background: #f2f5f7;
+    padding: 9px 0;
+    border-top: 1px solid #e6e9ed;
+}
