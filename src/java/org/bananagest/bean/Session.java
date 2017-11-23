@@ -12,9 +12,9 @@ import org.bananagest.model.UsersData;
 @ManagedBean(name = "session")
 public class Session {
     
-    private userName;
+    private  String userName;
     
-    public void getUserName()
+    public String getUserName()
     {
         return "Fernando";
     }
