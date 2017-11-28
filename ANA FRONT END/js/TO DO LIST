@@ -1,0 +1,17 @@
+var contador = 0
+,   select_opt = 0;
+
+function add_to_list(){
+var action = document.querySelector('#action_select').value,
+description = document.querySelector('.input_description').value,
+title = document.querySelector('.input_title_desc').value,
+date = document.getElementById('date_select').value;
+
+
+switch (action) {
+  case "SHOPPING":
+ select_opt  = 0;
+    break;
+case "WORK":
+select_opt = 1;
+    break;

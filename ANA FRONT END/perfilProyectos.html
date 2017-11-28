@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Banana GEST Admin</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Fontastic Custom icon font-->
+    <link rel="stylesheet" href="css/fontastic.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Google fonts - Poppins -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="favicon.png">
+
+    <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
+  </head>
+  <body>
+    <div class="page form-page">
+      <!-- Main Navbar-->
+      <header class="header">
+        <nav class="navbar">
+          <!-- Search Box-->
+          <div class="search-box">
+            <button class="dismiss"><i class="icon-close"></i></button>
+            <form id="searchForm" action="#" role="search">
+              <input type="search" placeholder="What are you looking for..." class="form-control">
+            </form>
+          </div>
+          <div class="container-fluid">
+            <div class="navbar-holder d-flex align-items-center justify-content-between">
+              <!-- Navbar Header-->
+              <div class="navbar-header">
+                <!-- Navbar Brand --><a href="index.html" class="navbar-brand">
+                  <div class="brand-text brand-big"><strong>Banana GEST</strong></div>
+                  <div class="brand-text brand-small"><strong>Banana GEST</strong></div></a>
+                <!-- Toggle Button--><a id="toggle-btn" href="#" class="menu-btn active"><span></span><span></span><span></span></a>
+              </div>
+              <!-- Navbar Menu -->
+              <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                <!-- Search-->
+                <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
+                <!-- Notifications-->
+                <li class="nav-item dropdown"> <a id="notifications" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-bell-o"></i><span class="badge bg-red">12</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-envelope bg-green"></i>You have 6 new messages </div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-upload bg-orange"></i>Server Rebooted</div>
+                          <div class="notification-time"><small>4 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item">
+                        <div class="notification">
+                          <div class="notification-content"><i class="fa fa-twitter bg-blue"></i>You have 2 followers</div>
+                          <div class="notification-time"><small>10 minutes ago</small></div>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>view all notifications                                            </strong></a></li>
+                  </ul>
+                </li>
+                <!-- Messages                        -->
+                <li class="nav-item dropdown"> <a id="messages" rel="nofollow" data-target="#" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link"><i class="fa fa-envelope-o"></i><span class="badge bg-orange">10</span></a>
+                  <ul aria-labelledby="notifications" class="dropdown-menu">
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                        <div class="msg-profile"> <img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Jason Doe</h3><span>Sent You Message</span>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                        <div class="msg-profile"> <img src="img/avatar-2.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Frank Williams</h3><span>Sent You Message</span>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item d-flex">
+                        <div class="msg-profile"> <img src="img/avatar-3.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                        <div class="msg-body">
+                          <h3 class="h5">Ashley Wood</h3><span>Sent You Message</span>
+                        </div></a></li>
+                    <li><a rel="nofollow" href="#" class="dropdown-item all-notifications text-center"> <strong>Read all messages</strong></a></li>
+                  </ul>
+                </li>
+                <!-- Logout    -->
+                <li class="nav-item"><a href="index.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+      <div class="page-content d-flex align-items-stretch">
+        <!-- Side Navbar -->
+        <nav class="side-navbar">
+          <!-- Sidebar Header-->
+          <div class="sidebar-header d-flex align-items-center">
+            <div class="avatar"><img src="img/avatar-1.jpg" alt="..." class="img-fluid rounded-circle"></div>
+            <div class="title">
+              <h1 class="h4">Ana Garza Sanchez</h1>
+              <p>Admin</p>
+            </div>
+          </div>
+          <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+          <ul class="list-unstyled">
+            <li> <a href="home.html"><i class="icon-home"></i>Home</a></li>
+            <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-grid"></i>Proyectos y Tareas</a>
+              <ul id="dashvariants" class="collapse list-unstyled">
+                <li><a href="ControlDeProyectos.html">Control de Proyectos</a></li>
+                  <li><a href="ControlDeTareas.html">Control de Tareas</a></li>
+              </ul>
+            </li>
+            <li> <a href="usuarios.html"> <i class="icon-interface-windows"></i>Usuarios</a></li>
+            <li> <a href="#"> <i class="icon-mail"></i>Buzon</a></li>
+          </ul>
+          </nav>
+          <!-- +++++++++++++++++++++++++++++++++++++++++++++++++++AQUI TERMINA LO QUE VA EN TODAS LAS PAGINAS+++++++++++++++++++++++++++++++++++++++++++++++++++++++ -->
+        <div class="content-inner">
+          <!-- Page Header-->
+          <header class="page-header">
+            <div class="container-fluid">
+              <h2 class="no-margin-bottom">Perfil de Usuario</h2>
+            </div>
+          </header>
+          <!-- Breadcrumb-->
+          <div class="breadcrumb-holder container-fluid">
+            <ul class="breadcrumb">
+              <li class="breadcrumb-item"><a href="home.html">Home</a></li>
+              <li class="breadcrumb-item "><a href="ControlDeProyectos.html"> Control de Proyectos</a></li>
+              <li class="breadcrumb-item"><a href="# "  data-toggle="modal" data-target="#RegistroProyectos-modal" >Registrar Proyectos y Tareas</a></li>
+            </ul>
+          </div>
+          <!-- *** REGISTRO PROYECTOS Y TAREAS MODAL QUE VA LOS HTML DE ControlDeProyectos ControlDeTareas perfilProyectos perfilTareas***_________________________________________________________  -->
+          <div id="RegistroProyectos-modal" tabindex="-1" role="dialog" aria-labelledby="Proyectos" aria-hidden="true" class="modal fade">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                  <h4 id="Resgistro" class="modal-title"> Registro</h4>
+                </div>
+                <div class="modal-body">
+                  <form  action="#"  method="post">
+                    <div class="form-group">
+                      <select id="actividadselect" name="actividad" class="form-control">
+                        <option>Tipo de Actividad</option>
+                        <option>Tarea</option>
+                        <option>Proyecto</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id= "nombre_modalRegistroPT" name= "Nombretxt"class="form-control" placeholder="Id de la actividad" >
+                    </div>
+                    <div class="form-group">
+                      <input type="text" id= "nombre_modalRegistroPT" name= "Nombretxt"class="form-control" placeholder="Nombre de la actividad" >
+                    </div>
+                    <div class="form-group">
+                      <input id="responsable_modalmodalRegistroPT" name="responsable" type="text" placeholder="Nombre del Responsable" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <input id="departamento_modalmodalRegistroPT" name="departamento" type="text" placeholder="Departamento" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label">Fecha de Inicio:</label>
+                      <input type="date" id="inicio_modalmodalRegistroPT" name="fechaDeIniciotxt" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label">Fecha de Revision:</label>
+                      <input type="date" id="revision_modalmodalRegistroPT" name="fechaDeRevisiontxt" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label">Fecha de Entrga:</label>
+                      <input type="date" id="rentrega_modalmodalRegistroPT" name="fechaDeEntregantxt" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                    <label class="col-sm-3 form-control-label">Descripcion:</label>
+                    <textarea id="descripcion_modalmodalRegistroPT"   name="descripciontxt" placeholder="Escribe la descripcion aqui" style="width:100%"></textarea>
+                  </div>
+              <p class="text-center">
+        <button id="resetPT" name="PTReset" type="reset" class="btn btn-warning">Resetear</button>
+          <button id="CancelPT" name="PTCancelar" type="button" class="btn btn-danger">Cancelar</button>
+            <button id="GuardarPT" name="PTGuardar" type="submit" class="btn btn-success">Guardat</button></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- *** FIN DE REGISTRO PROYECTOS Y TAREAS MODAL QUE VA LOS HTML DE ControlDeProyectos ControlDeTareas perfilProyectos perfilTareas***_________________________________________________________  -->
+    <!--Inicio del EDIT PERFIL MODAL -->
+          <div id="ProyectosDetallesEdit-modal" tabindex="-1" role="dialog" aria-labelledby="Pefil" aria-hidden="true" class="modal fade">
+            <div class="modal-dialog modal-md">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-hidden="true" class="close">×</button>
+                  <h4 id="Resgistro" class="modal-title"> Editar</h4>
+                </div>
+                <div class="modal-body">
+                  <form  action="#"  method="post">
+                    <div class="form-group">
+                      <input type="text" id= "idproyecto_editmodal" name= "idproyectosModal" class="form-control" placeholder="Id del Proyecto" >
+                      </div>
+                        <div class="form-group">
+                      <input type="text" id= "nombreproyecto" name= "nombreTarea"class="form-control" placeholder="Nombre del Proyecto" >
+                    </div>
+                    <div class="form-group">
+                  <input type="number" id= "avance" name= "avances"class="form-control" placeholder="Porcentaje de progreso" >
+                </div>
+                  <div class="form-group">
+                    <input id="Responsable_modal" name="Responsabletxt" type="text" placeholder="Nombre del Responsable" class="form-control">
+                  </div>
+                  <div class="form-group">
+                    <input id="Departamento_modal" name="Departamentotxt" type="text" placeholder="Departamento" class="form-control">
+                  </div>
+                    <div class="form-group">
+                      <label class="form-control-label">Fecha de inicio:</label>
+                      <input type="date"id="DFechaInicio_modal" name="FechaDeIniciotxt" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label">Fecha de Entrega:</label>
+                      <input type="date" name="DEntrega" class="form-control" >
+                    </div>
+                    <div class="form-group">
+                      <label class="form-control-label">Fecha de Revision:</label>
+                      <input type="date" id="Drevision" name="DateRevision" class="form-control" >
+                    </div>
+                        <div class="form-group">
+                        <label class="col-sm-3 form-control-label">Descripcion:</label>
+                        <textarea id="ProDescripcion"   name="ProyectosDescripcion" placeholder="Escribe la descripcion aqui" style="width:100%;"></textarea>
+                      </div>
+
+                    <p class="text-center">
+                      <button  type="reset" class="btn btn-warning">Reset</button>
+                        <button id="ProyectosCancel" name="CancelPro" type="button" class="btn btn-danger">Cancel</button>
+                          <button  id="GuardarCambio" name="CambioGuardar" type="submit" class="btn btn-success">Save</button></p>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+<!--Fin del MODAL EDIT PERFIL-->
+  <!-- datos de proyectos-->
+  <!-- datos de tareas-->
+<div class="panel panel-info">
+             <br></br>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-3 col-lg-3 " align="center">
+                 <img src="img/icono.png" alt="" class="img-circle img-responsive"/>
+                 <br> </br>
+                 <h3 class="panel-title">Nombre del Proyecto: PatitoApps</h3>
+              </div>
+               <div class=" col-md-9 col-lg-9 ">
+                <table id="datosProyectos" name="ProyectosDatos" class="table table-user-information">
+                  <tbody>
+                  </tr>
+                  <tr>
+                  <td>Progreso: </td>
+                  <td class="project_progress">
+                    <div class="progress"><div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">  100%
+                  </div>
+
+                </tr>
+                    <td>Id: </td>
+                    <td>00101010</td>
+                  </tr>
+                <tr>
+                  <td>Responsable: </td>
+                  <td>Norma </td>
+                </tr>
+                   <td>Departmento:</td>
+                   <td>Programming</td>
+                 </tr>
+                 <tr>
+                   <td>Fecha de inico:</td>
+                   <td>06/23/2013</td>
+                 </tr>
+                 <tr>
+                   <td>Fecha de entrega: </td>
+                   <td>01/24/1988</td>
+                 </tr>
+                 <tr>
+                   <td>Fecha de revision:</td>
+                   <td>06/23/2013</td>
+                 </tr>
+                    <tr>
+                        <tr>
+                   <td>Detalles</td>
+                   <td><p>Lorem ipsum dolor sit amet, usu rebum errem pericula ea, ei alia quaerendum vix. Ea justo tritani sit, odio ignota quo te. Ei pro vedolor cotidieque. Ut quas commodo signiferumque mei, has ut quas ullum, cum eius sensibus voluptatibus no. Id qui assum legis, cum ut movet definiebas instructior, ex nam vero expetendis adipiscing.
+                     Iudico eligendi nec an, quo natum audire discere et, ea ludus option qualisque usu. Ne nullam graece vidisse vix, odio sapientem vim, qui cu vidisse pericula. Dicant mucius consequat mea et, tacimates laboramus sententiae quo in. Usu et eirmod aliquid labo Usu et eirmod aliquid laboramus..<p></td>
+                 </tr>
+              </tbody>
+             </table>
+             <a href="#" type="button"  data-toggle="modal" data-target="#ProyectosDetallesEdit-modal" class="btn btn-success btn-xs"><i class="fa fa-edit"> </i>Editar</a>
+               <a  id= "BorrarProyectosbtn" name="BorrarProyecto" href="#" type="button" class="btn btn-danger btn-xs" ><i class="fa fa-edit"> </i> Borrar </a>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+</div>
+    <!--form footer-->
+          <footer class="main-footer">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm-6">
+                  <p>Banana GEST &copy; 2017-2019</p>
+                </div>
+                <div class="col-sm-6 text-right">
+                  <p>Design by <a href="https://bootstrapious.com/admin-templates" class="external">Bootstrapious</a></p>
+                  <!-- Please do not remove the backlink to us unless you support further theme's development at https://bootstrapious.com/donate. It is part of the license conditions. Thank you for understanding :)-->
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <!-- Javascript files-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js"> </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/front.js"></script>
+  </body>
+</html>
