@@ -25,6 +25,13 @@
             <!-- Main Navbar-->
             <header class="header">
                 <nav class="navbar">
+                  <!-- Search Box-->
+                  <div class="search-box">
+                      <button class="dismiss"><i class="icon-close"></i></button>
+                      <form id="searchForm" action="#" role="search">
+                          <input type="search" placeholder="What are you looking for..." class="form-control"/>
+                      </form>
+                  </div>
                     <div class="container-fluid">
                         <div class="navbar-holder d-flex align-items-center justify-content-between">
                             <!-- Navbar Header-->
@@ -36,6 +43,8 @@
                             </div>
                             <!-- Navbar Menu -->
                             <ul class="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">
+                              <!-- Search-->
+                              <li class="nav-item d-flex align-items-center"><a id="search" href="#"><i class="icon-search"></i></a></li>
                                 <!-- Logout    -->
                                 <li class="nav-item"><a href="login.html" class="nav-link logout">Logout<i class="fa fa-sign-out"></i></a></li>
                             </ul>
@@ -57,26 +66,9 @@
                 </div>
                 <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
                 <ul class="list-unstyled">
-                    <li class="active"> <a href="index.html"><i class="icon-home"></i>Home</a></li>
-                    <li><a href="#dashvariants" aria-expanded="false" data-toggle="collapse"> <i class="icon-interface-windows"></i>Dropdown </a>
-                        <ul id="dashvariants" class="collapse list-unstyled">
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                            <li><a href="#">Page</a></li>
-                        </ul>
-                    </li>
-                    <li> <a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>
-                    <li> <a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-                    <li> <a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
-                    <li> <a href="login.html"> <i class="icon-interface-windows"></i>Login Page</a></li>
-                </ul><span class="heading">Extras</span>
-                <!-- Sidebar DEMO Menus-->
-                <ul class="list-unstyled">
-                    <li> <a href="#"> <i class="icon-flask"></i>Demo </a></li>
-                    <li> <a href="#"> <i class="icon-screen"></i>Demo </a></li>
-                    <li> <a href="#"> <i class="icon-mail"></i>Demo </a></li>
-                    <li> <a href="#"> <i class="icon-picture"></i>Demo </a></li>
+                    <li class="active"> <a href="index.html"><i class="icon-home"></i>Dashboard</a></li>
+                    <li> <a href="tables.html"> <i class="fa fa-tasks"></i>Projects </a></li>
+                    <li> <a href="users.html"> <i class="fa fa-users"></i>Users </a></li>
                 </ul>
             </nav>
             <div class="content-inner">
